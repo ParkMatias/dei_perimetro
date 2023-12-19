@@ -1,7 +1,5 @@
 ESX = exports['es_extended']:getSharedObject()
 
-local activeBlip = nil
-local activeBlip2 = nil
 local activeBlips = {}
 
 RegisterNetEvent('marcarPerimetro')
@@ -33,7 +31,7 @@ AddEventHandler('marcarPerimetro', function(playerId, coords, mensaje)
 
     Notificacion(mensaje)
 
-    Citizen.CreateThread(function ()
+    Citizen.CreateThread(function()
         while true do
             SetBlipColour(activeBlip, 3)
             SetBlipColour(activeBlip2, 3)
@@ -55,21 +53,17 @@ AddEventHandler('marcarPerimetro', function(playerId, coords, mensaje)
     end)
 end)
 
-function Notificacion(mensaje)
+Notificacion = function (mensaje)
     mensaje = mensaje
     if Config.Notificacion == 'esx' then
         ESX.ShowNotification(mensaje, 'info', 3000)
     elseif Config.Notificacion == 'mythic' then
         exports['mythic_notify']:SendAlert('inform', mensaje, 3000)
-
     elseif Config.Notificacion == 'codem' then
         TriggerEvent('codem-notification:Create', mensaje, 'info', 'Perimetro', 5000)
-
     elseif Config.Notificacion == 'okok' then
         exports['okokNotify']:Alert('inform', mensaje, 3000)
     else
         print('No se ha seleccionado ninguna notificacion')
     end
 end
-
-
