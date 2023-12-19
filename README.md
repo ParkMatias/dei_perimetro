@@ -8,8 +8,4 @@ Un simple script que permite a los que tengan job de "police" marcar un círculo
 
 ## Configuración
 
-Puedes personalizar este script ajustando los siguientes parámetros en el archivo `server.lua`:
-
-- `radius`: El radio del círculo azul que se muestra en el mapa.
-
-- Puedes cambiar el mensaje de error que se muestra cuando un jugador sin el trabajo "police" intenta usar el comando en la sección `else` del comando `/perimetro`.
+Puedes personalizar este script ajustando los parámetros en el archivo `config.lua`:
