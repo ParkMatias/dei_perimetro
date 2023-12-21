@@ -9,3 +9,8 @@ Un simple script que permite a los que tengan job de "police" marcar un círculo
 ## Configuración
 
 Puedes personalizar este script ajustando los parámetros en el archivo `config.lua`:
+
+
+## Soporte
+Si necesitas ayuda o quieres sugerir una implementacion para este script
+https://discord.gg/zP6CscVYDm
